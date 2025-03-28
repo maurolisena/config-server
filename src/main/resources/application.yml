@@ -8,5 +8,12 @@ spring:
       server:
         git:
           uri: https://github.com/maurolisena/config-repo
-          searchPaths: ""
+          default-label: master
           clone-on-start: true
+          search-paths: "src/main/resources"
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
